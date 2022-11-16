@@ -26,8 +26,7 @@ install:
   - export PATH=$PATH:~/.local/bin/
   - ls -l
   - echo "TODO COMPILE 64bit"
-  - ls -l /home/travis/
-  - ls -l /home/travis/build/DivanBoris/docviewer/
+  - ls -l
   - ls -la
   - rm -r -f .buildozer
   - ls -la
