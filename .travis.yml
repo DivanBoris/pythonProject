@@ -32,7 +32,7 @@ install:
   - ls -la
   - rm -r -f
   - ls -l
-  - yes | cp -f buildozer-64bit.spec
+  - yes | cp -f buildozer-64bit.spec buildozer.spec
   - yes | buildozer android debug
   - ls -la
   - ls bin/ -l
