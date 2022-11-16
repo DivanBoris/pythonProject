@@ -31,9 +31,7 @@ install:
   - ls -la
   - rm -r -f .buildozer
   - ls -la
-  - rm -r -f /home/travis/build/DivanBoris/docviewer/.buildozer
-  - ls -l /home/travis/
-  - ls -l /home/travis/build/DivanBoris/docviewer/
+  - rm -r -f
   - ls -l
   - yes | cp -f buildozer-64bit.spec
   - yes | buildozer android debug
