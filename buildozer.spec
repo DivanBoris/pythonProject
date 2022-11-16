@@ -4,10 +4,10 @@
 title = Mobile App 001
 
 # (str) Package name
-package.name = DocViewer
+package.name = docviewer
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.DivanBoris
+package.domain = org.divanboris
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -36,7 +36,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3.8,kivy==2.0.0
+requirements = python3,kivy==2.0.0
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
