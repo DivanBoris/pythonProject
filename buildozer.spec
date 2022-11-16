@@ -1,8 +1,7 @@
 [app]
 
-
 # (str) Title of your application
-title = Doc Viewer
+title = Mobile App 001
 
 # (str) Package name
 package.name = docviewer
@@ -29,7 +28,7 @@ source.dir = .
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 0.3
+version = 0.1
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -63,7 +62,7 @@ orientation = all
 # author = © Copyright Info
 
 # change the major version of python used by the app
-osx.python_version = 3.8
+osx.python_version = 3
 
 # Kivy version to use
 osx.kivy_version = 2.1.0
@@ -227,7 +226,7 @@ fullscreen = 0
 #android.copy_libs = 1
 
 # (str) The Android arch to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
-android.arch = arm64-v8a
+android.arch = armeabi-v7a
 
 # (int) overrides automatic versionCode computation (used in build.gradle)
 # this is not the same as app version and should only be edited if you know what you're doing
