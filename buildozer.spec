@@ -4,7 +4,7 @@
 title = Doc Viewer
 
 # (str) Package name
-package.name = docviewer
+package.name = docviewer1
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.pythonProject
