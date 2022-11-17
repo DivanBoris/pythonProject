@@ -62,10 +62,10 @@ orientation = all
 # author = © Copyright Info
 
 # change the major version of python used by the app
-osx.python_version = 3.8
+osx.python_version = 3
 
 # Kivy version to use
-osx.kivy_version = 2.1.0
+osx.kivy_version = 2.0.0
 
 #
 # Android specific
@@ -308,7 +308,7 @@ ios.codesign.allowed = false
 [buildozer]
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
-log_level = 1
+log_level = 2
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
 warn_on_root = 1
