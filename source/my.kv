@@ -5,6 +5,10 @@ WindowManager:
     DriverCardWindow:
     InternationalPassportOldWindow:
     InternationalPassportNewWindow:
+    SeamanbookWindow:
+    InnRusWindow:
+    InnTurWindow:
+    IinKzWindow:
     OpitoWindow:
     BasicSafetyWindow:
     SecurityTrainingWindow:
@@ -12,6 +16,10 @@ WindowManager:
     OGUKWindow:
     NorwegianWindow:
     PfizerWindow:
+    YellowWindow:
+    PolisWindow:
+    SnilsWindow:
+
 
 <FirstWindow>:
     name: "first"
@@ -29,14 +37,16 @@ WindowManager:
         Label:
             id: FirstLabel
             text: 'Выберите опцию'
-            font_size: 25
+            font_size: '22sp'
+            font_name: "source/Century Gothic.ttf"
             color: '#FF8C00'
             halign: 'center'
 
         RoundedButton:
             id: ButtonCheck
-            text: 'Проверка документов на истечение срока'
-            font_size: 20
+            text: 'Проверка документов'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
 
@@ -45,7 +55,8 @@ WindowManager:
         RoundedButton:
             id:ButtonList
             text: 'Лист с документами'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -67,7 +78,8 @@ WindowManager:
         Label:
             id: SecondLabel
             text: 'Список документов'
-            font_size: 25
+            font_size: "25sp"
+            font_name: "source/Century Gothic.ttf"
             color: '#FF8C00'
             halign: 'center'
             size_hint: (1, 0.3)
@@ -75,7 +87,8 @@ WindowManager:
         RoundedButton:
             id: DriverCard
             text: 'Водительское удостоверение'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -84,7 +97,8 @@ WindowManager:
         RoundedButton:
             id: International_Passport_old
             text: 'Загранпаспорт №1'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -93,16 +107,58 @@ WindowManager:
         RoundedButton:
             id: International_Passport_new
             text: 'Загранпаспорт №2'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
                 app.root.current = 'InternationalPassportNewWindow'
                 root.manager.transition.direction = "left"
         RoundedButton:
+            id: Seamanbook
+            text: 'Паспорт моряка'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_release:
+                app.root.current = 'SeamanbookWindow'
+                root.manager.transition.direction = "left"
+        RoundedButton:
+            id: InnRus
+            text: 'Российский ИНН'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_release:
+                app.root.current = 'InnRusWindow'
+                root.manager.transition.direction = "left"
+        RoundedButton:
+            id: InnTur
+            text: 'Турецкий ИНН'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_release:
+                app.root.current = 'InnTurWindow'
+                root.manager.transition.direction = "left"
+        RoundedButton:
+            id: IinKz
+            text: 'Казахстанский ИИН'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_release:
+                app.root.current = 'IinKzWindow'
+                root.manager.transition.direction = "left"
+        RoundedButton:
             id: Opito
             text: 'Опито'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -111,7 +167,8 @@ WindowManager:
         RoundedButton:
             id: BasicSafety
             text: 'НБЖС'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -120,7 +177,8 @@ WindowManager:
         RoundedButton:
             id: SecurityTraining
             text: 'Подготовка по охране'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -129,7 +187,8 @@ WindowManager:
         RoundedButton:
             id: ID_Seafarers
             text: 'УЛМ'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -138,7 +197,8 @@ WindowManager:
         RoundedButton:
             id: OGUK
             text: 'ОГУК'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -147,7 +207,8 @@ WindowManager:
         RoundedButton:
             id: Norwegian
             text: 'Норвежская медкомиссия'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -156,15 +217,47 @@ WindowManager:
         RoundedButton:
             id: Pfizer
             text: 'Прививка'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
                 app.root.current = 'PfizerWindow'
                 root.manager.transition.direction = "left"
         RoundedButton:
+            id: Yellow
+            text: 'Желтая лихорадка'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_release:
+                app.root.current = 'YellowWindow'
+                root.manager.transition.direction = "left"
+        RoundedButton:
+            id: Polis
+            text: 'Полис'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_release:
+                app.root.current = 'PolisWindow'
+                root.manager.transition.direction = "left"
+        RoundedButton:
+            id: Snils
+            text: 'Снилс'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_release:
+                app.root.current = 'SnilsWindow'
+                root.manager.transition.direction = "left"
+        RoundedButton:
             text: 'Назад'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             size_hint: (1, 0.3)
             on_release:
                 app.root.current = "first"
@@ -179,7 +272,8 @@ WindowManager:
         Label:
             id: DriverCardLabel
             text: 'Водительское удостоверение'
-            font_size: 25
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
             color: '#FF8C00'
             halign: 'center'
             size_hint: (1, 0.3)
@@ -191,7 +285,8 @@ WindowManager:
         RoundedButton:
             id:DriverCardWindowBack
             text: 'Назад'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -207,7 +302,8 @@ WindowManager:
         Label:
             id: InternationalPassportOldLabel
             text: 'Загранпаспорт №1'
-            font_size: 25
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
             color: '#FF8C00'
             halign: 'center'
             size_hint: (1, 0.3)
@@ -219,7 +315,8 @@ WindowManager:
         RoundedButton:
             id:InternationalPassportOldBack
             text: 'Назад'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -235,7 +332,8 @@ WindowManager:
         Label:
             id: InternationalPassportNewLabel
             text: 'Загранпаспорт №2'
-            font_size: 25
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
             color: '#FF8C00'
             halign: 'center'
             size_hint: (1, 0.3)
@@ -247,9 +345,124 @@ WindowManager:
         RoundedButton:
             id:InternationalPassportNewBack
             text: 'Назад'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+<SeamanbookWindow>
+    name: 'SeamanbookWindow'
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        padding: 5
+        spacing: 2
+        Label:
+            id: SeamanbookLabel
+            text: 'Паспорт моряка'
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
+            color: '#FF8C00'
+            halign: 'center'
+            size_hint: (1, 0.3)
+        Image:
+            source: 'source/Seamans_book.png'
+            size_hint: (1, 3)
+            allow_stretch: True
+            keep_ratio: True
+        RoundedButton:
+            id:SeamanbookBack
+            text: 'Назад'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+<InnRusWindow>
+    name: 'InnRusWindow'
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        padding: 5
+        spacing: 2
+        Label:
+            id: InnRusLabel
+            text: 'Номер: 602721894883'
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
+            color: '#FF8C00'
+            halign: 'center'
+            valign: 'center'
+            size_hint: (1, 3)
+        RoundedButton:
+            id:InnRusBack
+            text: 'Назад'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_press:
+                root.copyrus()
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+<InnTurWindow>
+    name: 'InnTurWindow'
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        padding: 5
+        spacing: 2
+        Label:
+            id: InnTurLabel
+            text: 'Номер: 4691344476'
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
+            color: '#FF8C00'
+            halign: 'center'
+            valign: 'center'
+            size_hint: (1, 3)
+        RoundedButton:
+            id:InnTurBack
+            text: 'Назад'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_press:
+                root.copytur()
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+<IinKzWindow>
+    name: 'IinKzWindow'
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        padding: 5
+        spacing: 2
+        Label:
+            id: IinKzLabel
+            text: 'Номер: 930408050445'
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
+            color: '#FF8C00'
+            halign: 'center'
+            valign: 'center'
+            size_hint: (1, 3)
+        RoundedButton:
+            id:IinKzBack
+            text: 'Назад'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_press:
+                root.copykz()
             on_release:
                 app.root.current = "second"
                 root.manager.transition.direction = "right"
@@ -263,7 +476,8 @@ WindowManager:
         Label:
             id: OpitoLabel
             text: 'Опито'
-            font_size: 25
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
             color: '#FF8C00'
             halign: 'center'
             size_hint: (1, 0.3)
@@ -275,7 +489,8 @@ WindowManager:
         RoundedButton:
             id:OpitoBack
             text: 'Назад'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -291,7 +506,8 @@ WindowManager:
         Label:
             id: BasicSafetyLabel
             text: 'НБЖС'
-            font_size: 25
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
             color: '#FF8C00'
             halign: 'center'
             size_hint: (1, 0.3)
@@ -303,7 +519,8 @@ WindowManager:
         RoundedButton:
             id:BasicSafetyBack
             text: 'Назад'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -319,7 +536,8 @@ WindowManager:
         Label:
             id: SecurityTrainingLabel
             text: 'Подготовка по охране'
-            font_size: 25
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
             color: '#FF8C00'
             halign: 'center'
             size_hint: (1, 0.3)
@@ -331,7 +549,8 @@ WindowManager:
         RoundedButton:
             id:SecurityTrainingBack
             text: 'Назад'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -347,7 +566,8 @@ WindowManager:
         Label:
             id: IdLabel
             text: 'УЛМ'
-            font_size: 25
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
             color: '#FF8C00'
             halign: 'center'
             size_hint: (1, 0.3)
@@ -359,7 +579,8 @@ WindowManager:
         RoundedButton:
             id:IdBack
             text: 'Назад'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -375,7 +596,8 @@ WindowManager:
         Label:
             id: OGUKLabel
             text: 'ОГУК'
-            font_size: 25
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
             color: '#FF8C00'
             halign: 'center'
             size_hint: (1, 0.3)
@@ -387,7 +609,8 @@ WindowManager:
         RoundedButton:
             id:OGUKBack
             text: 'Назад'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -403,7 +626,8 @@ WindowManager:
         Label:
             id: NorwegianLabel
             text: 'Норвежская медкомиссия'
-            font_size: 25
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
             color: '#FF8C00'
             halign: 'center'
             size_hint: (1, 0.3)
@@ -415,7 +639,8 @@ WindowManager:
         RoundedButton:
             id:NorwegianBack
             text: 'Назад'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:
@@ -430,8 +655,9 @@ WindowManager:
         spacing: 2
         Label:
             id: PfizerLabel
-            text: 'Норвежская медкомиссия'
-            font_size: 25
+            text: 'Прививка'
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
             color: '#FF8C00'
             halign: 'center'
             size_hint: (1, 0.3)
@@ -443,7 +669,98 @@ WindowManager:
         RoundedButton:
             id:PfizerBack
             text: 'Назад'
-            font_size: 20
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+<YellowWindow>
+    name: 'YellowWindow'
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        padding: 5
+        spacing: 2
+        Label:
+            id: YellowLabel
+            text: 'Желтая лихорадка'
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
+            color: '#FF8C00'
+            halign: 'center'
+            size_hint: (1, 0.3)
+        Image:
+            source: 'source/YellowFever.png'
+            size_hint: (1, 3)
+            allow_stretch: True
+            keep_ratio: True
+        RoundedButton:
+            id:YellowBack
+            text: 'Назад'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+<PolisWindow>
+    name: 'PolisWindow'
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        padding: 5
+        spacing: 2
+        Label:
+            id: PolisLabel
+            text: 'Полис'
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
+            color: '#FF8C00'
+            halign: 'center'
+            size_hint: (1, 0.3)
+        Image:
+            source: 'source/Polis.png'
+            size_hint: (1, 3)
+            allow_stretch: True
+            keep_ratio: True
+        RoundedButton:
+            id:YellowBack
+            text: 'Назад'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (1, .3)
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+<SnilsWindow>
+    name: 'SnilsWindow'
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        padding: 5
+        spacing: 2
+        Label:
+            id: SnilsLabel
+            text: 'Снилс'
+            font_size: '25sp'
+            font_name: "source/Century Gothic.ttf"
+            color: '#FF8C00'
+            halign: 'center'
+            size_hint: (1, 0.3)
+        Image:
+            source: 'source/Snils.png'
+            size_hint: (1, 3)
+            allow_stretch: True
+            keep_ratio: True
+        RoundedButton:
+            id:SnilsBack
+            text: 'Назад'
+            font_size: '20sp'
+            font_name: "source/Century Gothic.ttf"
             pos_hint: {'center_x': 0.5}
             size_hint: (1, .3)
             on_release:

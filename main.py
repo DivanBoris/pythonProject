@@ -10,9 +10,10 @@ from kivy.core.window import Window
 from datetime import datetime, date
 from kivy.core.window import Window
 from kivy.uix.behaviors import TouchRippleBehavior
+from kivy.core.clipboard import Clipboard
 
 #Window.size = (430, 720)
-#https://disk.yandex.ru/d/oS5emGrqIHee8w
+#https://disk.yandex.ru/d/XRfKZJ2o0cFb6A
 
 class FirstWindow(Screen):
     def calc(self):
@@ -53,6 +54,21 @@ class InternationalPassportOldWindow(Screen):
 class InternationalPassportNewWindow(Screen):
     pass
 
+class SeamanbookWindow(Screen):
+    pass
+
+class InnRusWindow(Screen):
+    def copyrus(self):
+        Clipboard.copy("602721894883")
+
+class InnTurWindow(Screen):
+    def copytur(self):
+        Clipboard.copy("4691344476")
+
+class IinKzWindow(Screen):
+    def copykz(self):
+        Clipboard.copy("930408050445")
+
 class OpitoWindow(Screen):
     pass
 
@@ -74,8 +90,19 @@ class NorwegianWindow(Screen):
 class PfizerWindow(Screen):
     pass
 
+class YellowWindow(Screen):
+    pass
+
+class PolisWindow(Screen):
+    pass
+
+class SnilsWindow(Screen):
+    pass
+
 class WindowManager(ScreenManager):
     pass
+
+
 
 
 kv = Builder.load_file('source/my.kv')
