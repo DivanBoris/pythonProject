@@ -11,7 +11,7 @@ from datetime import datetime, date
 from kivy.core.window import Window
 from kivy.uix.behaviors import TouchRippleBehavior
 
-Window.size = (430, 720)
+#Window.size = (430, 720)
 #https://disk.yandex.ru/d/oS5emGrqIHee8w
 
 class FirstWindow(Screen):
