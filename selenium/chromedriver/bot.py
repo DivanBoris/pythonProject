@@ -25,20 +25,25 @@ def get_user_text(message):
         def imo_answer(message):
             global imo  # объявляем глобальную переменную
             imo = message.text
-            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            location = types.KeyboardButton('Location')
-            vessel_position_age = types.KeyboardButton('Age of position')
-            speed_heading = types.KeyboardButton('Speed/Heading')
-            vessel_img = types.KeyboardButton('Vessel image')
-            vessel_purpose = types.KeyboardButton('Vessel purpose')
-            vessel_name = types.KeyboardButton('Vessel name')
-            navigation_status = types.KeyboardButton('Navigation status')
-            back = types.KeyboardButton('Back')
-            markup.add(location, vessel_position_age, speed_heading, vessel_img, vessel_purpose, vessel_name, navigation_status, back)
-            bot.send_message(message.chat.id, 'Please count to 20 (let it parse) and choose option', reply_markup=markup)
-            with open('vessel_parsing.txt', 'w', )as file:
-               file.write(f'{str(main.get_data_for_vessel(imo))}')
-               file.close()
+            if len(imo) == 7 and imo.isdigit() == True:
+                markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+                location = types.KeyboardButton('Location')
+                vessel_position_age = types.KeyboardButton('Age of position')
+                speed_heading = types.KeyboardButton('Speed/Heading')
+                vessel_img = types.KeyboardButton('Vessel image')
+                vessel_purpose = types.KeyboardButton('Vessel purpose')
+                vessel_name = types.KeyboardButton('Vessel name')
+                navigation_status = types.KeyboardButton('Navigation status')
+                back = types.KeyboardButton('Back')
+                markup.add(location, vessel_position_age, speed_heading, vessel_img, vessel_purpose, vessel_name, navigation_status, back)
+                bot.send_message(message.chat.id, 'Please count to 20 (let it parse) and choose option', reply_markup=markup)
+                with open('vessel_parsing.txt', 'w', )as file:
+                   file.write(f'{str(main.get_data_for_vessel(imo))}')
+                   file.close()
+            else:
+                bot.send_message(message.chat.id, "Parsing failed, please check IMO number and try again")
+                if message.text == 'Parsing failed, please check IMO number and try again':
+                    get_user_text(message)
         bot.register_next_step_handler(message, imo_answer)
 
     elif message.text == 'Location':

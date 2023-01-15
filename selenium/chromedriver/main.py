@@ -7,8 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 def get_data_for_vessel(x):
     options = webdriver.ChromeOptions()
-    # options.add_argument('headless')
-    # options.add_argument('--no-sandbox')
+    options.add_argument('headless')
+    options.add_argument('--no-sandbox')
     options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36')
     vessel_url = f'https://www.marinetraffic.com/en/ais/details/ships/imo:{x}'
     driver = webdriver.Chrome(
@@ -27,7 +27,7 @@ def get_data_for_vessel(x):
         mouse_cursor = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="vesselDetails_latestPositionSection"]/div[2]/div/div/div/div/div[1]/p[6]')))
         action = ActionChains(driver)
         action.move_to_element(mouse_cursor).perform()
-        driver.execute_script('window.scrollTo(0, 3800)')
+        driver.execute_script('window.scrollTo(0, 3600)')
         vessel_img = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="vesselDetailsHeader"]/div/div/div[1]/div/img'))).get_attribute('src')
         navigation_status = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="vesselDetails_latestPositionSection"]/div[2]/div/div/div/div/div[1]/p[6]'))).text[21:]
         speed_heading = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="vesselDetails_latestPositionSection"]/div[2]/div/div/div/div/div[1]/p[7]'))).text[14:]
@@ -66,7 +66,7 @@ def get_data_for_aircraft(x):
         wait = WebDriverWait(driver, 10)
         driver.refresh()
         cookies = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#onetrust-accept-btn-handler'))).click()
-        search = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="searchBox"]'))).send_keys(x)
+        search = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="searchBox"]'))).send_keys(x.upper())
         flight_click = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#mapControlsApp > div > div:nth-child(7) > section > div > div.absolute.z-10.ml-0.overflow-hidden.shadow-default.w-\[375px\].min-h-10.rounded-2xl.mt-12 > div > div > div > div.contents > div > div:nth-child(2) > div:nth-child(2) > div > div > a > div.flex.items-center.justify-center.pl-2.pr-0 > button > svg'))).click()
         mouse_cursor = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="mapStaticOverlays"]/div[3]/section[3]')))
         action = ActionChains(driver)
@@ -107,7 +107,7 @@ def get_data_for_aircraft(x):
 
 
 def main():
-    print(get_data_for_vessel('9268825'))
+    print(get_data_for_vessel('9691735'))
 
 
 if __name__ == '__main__':

@@ -1,1 +1,1 @@
-None
+{'airline': 'Qatar Airways', 'route': 'DENPASAR-DOHA', 'scheduled_time_of_arrival': '11:50', 'scheduled_time_of_departure': '7:00', 'aircraft_img': 'https://cdn.jetphotos.com/400/6/66602_1672474143.jpg?v=0', 'altitude': '10,973 m', 'aircraft_bearing': '304°', 'aircraft_speed': '902 km/h, 560 mph', 'aircraft_type': 'Boeing 777-3DZ(ER)', 'lat': '15.9699', 'lon': '66.1321'}
