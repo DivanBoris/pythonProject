@@ -1,0 +1,1 @@
+print(any(['thguo' in i.lower()[:-6:-1] for i in input().split()]))

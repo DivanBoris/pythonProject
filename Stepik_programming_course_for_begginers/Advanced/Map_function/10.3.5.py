@@ -1,0 +1,1 @@
+print([(i.upper(),i.lower()) for i in list(map(str, input())) if i != ' '])
